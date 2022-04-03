@@ -21,7 +21,7 @@ class Student(models.Model):
     standard = models.IntegerField(choices=StandartChoices.choices, blank=False, null=False)
 
 class Course(models.Model):
-    course_name = models.CharField(blank=False, null=False, max_length=200)
+    course_name = models.CharField(unique=True, blank=False, null=False, max_length=200)
     standard = models.IntegerField(choices=StandartChoices.choices, default=StandartChoices.EIGHT)
     isCompulsory = models.BooleanField(default=False)
 
