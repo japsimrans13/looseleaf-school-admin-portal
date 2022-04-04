@@ -19,9 +19,18 @@ class Student(models.Model):
     first_name = models.CharField(blank=False, null=False, max_length=200)
     last_name = models.CharField(blank=False, null=False, max_length=200)
     standard = models.IntegerField(choices=StandartChoices.choices, blank=False, null=False)
+    def __str__(self):
+        return self.first_name + " ID:" + str(self.id)
 
 class Course(models.Model):
     course_name = models.CharField(unique=True, blank=False, null=False, max_length=200)
     standard = models.IntegerField(choices=StandartChoices.choices, default=StandartChoices.EIGHT)
     isCompulsory = models.BooleanField(default=False)
+    def __str__(self):
+        return self.course_name + " ID:" + str(self.id)
 
+class EnrolledCourse(models.Model):
+    student = models.ForeignKey(to=Student, on_delete=models.CASCADE)
+    course = models.ForeignKey(to=Course, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.student.first_name + " ID:" + str(self.id) + self.course.course_name + " ID:" + str(self.course.id)
