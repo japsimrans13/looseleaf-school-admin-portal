@@ -26,4 +26,4 @@ DB_PASS=fvHP1L2fu2Iyj_yDTybP**********
 
 ## Documentation
 Complete Documentation as a [Postman](https://www.postman.com/) collection. 
-[Documentaion Link]()
+[Documentaion Link](https://www.postman.com/gold-trinity-454853/workspace/public-workspace/collection/15499812-dec1afb3-1cc7-488b-80a3-0add29fad7ba?action=share&creator=15499812)
