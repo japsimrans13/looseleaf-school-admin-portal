@@ -14,9 +14,10 @@ pip install -r requirements.txt
 
 Also a .env file is required to run the app
 The file must contain the following details
-    ### DEBUG_MODE=yes/no
-    ### SECRET_KEY=*************************************
-    ### DB_PASS=******************
+
+    DEBUG_MODE
+    SECRET_KEY
+    DB_PASS
 
 Example .env file
 ```
