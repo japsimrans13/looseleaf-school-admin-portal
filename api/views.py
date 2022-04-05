@@ -76,7 +76,7 @@ class EnrollCourse(generics.GenericAPIView):
             student = models.Student.objects.get(id=pk)
         except Exception as e:
             # As there is no student with the given ID, so returning 400 Bad request
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+            return Response({"Error":"Student with such ID does not exists"}, status=status.HTTP_400_BAD_REQUEST)
         print(student.standard)
         non_compulsory_courses = models.Course.objects.filter(standard=student.standard, isCompulsory=False)
         already_enrolled_courses = models.EnrolledCourse.objects.filter(student=student)
@@ -98,7 +98,7 @@ class EnrollCourse(generics.GenericAPIView):
             student = models.Student.objects.get(pk=pk)
         except Exception as e:
             # As there is no student with the given ID, so returning 400 Bad request
-            return Response({"Error":"Student with such ID does not exists"},status=status.HTTP_400_BAD_REQUEST)
+            return Response({"Error":"Student with such ID does not exists"}, status=status.HTTP_400_BAD_REQUEST)
 
         data = self.request.data.dict()
         # Checking if the new course to be enrolled, is not enrolled and, is not a compulsory course
