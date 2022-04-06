@@ -5,7 +5,8 @@ For testing and postman can be used, alternately the API's are browsable (can ru
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all The dependencies.
+Note: Its recommended to create a virtual environment before installing the dependencies.
 
 ```bash
 pip install -r requirements.txt
@@ -13,9 +14,10 @@ pip install -r requirements.txt
 
 Also a .env file is required to run the app
 The file must contain the following details
-    -DEBUG_MODE=yes/no
-    -SECRET_KEY=*************************************
-    -DB_PASS=******************
+
+    DEBUG_MODE
+    SECRET_KEY
+    DB_PASS
 
 Example .env file
 ```
