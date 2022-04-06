@@ -143,4 +143,3 @@ class ListStudentCourses(generics.GenericAPIView):
         serializer = serializers.CourseSerializer(instance=data, many=True)
         
         return Response(data =serializer.data,status=status.HTTP_200_OK)
-        
