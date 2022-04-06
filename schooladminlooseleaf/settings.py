@@ -36,7 +36,7 @@ if(debug=='yes'):
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '___.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'looseleaf-japsimran.herokuapp.com']
 
 
 # Application definition
